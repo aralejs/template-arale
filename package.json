@@ -1,0 +1,7 @@
+{
+  "name": "arale_template",
+  "root": "template",
+  "version": "1.0.0",
+  "description": "arale module template",
+  "type": "template"
+}
