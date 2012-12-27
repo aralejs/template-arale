@@ -4,7 +4,7 @@ define(function(require) {
 
     describe('{{name}}', function() {
 
-        test('normal usage', function() {
+        it('normal usage', function() {
 
         });
     });
