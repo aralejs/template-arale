@@ -32,28 +32,6 @@ exports.template = function(grunt, init, done) {
     // Actually copy (and process) files.
     init.copyAndProcess(files, props);
 
-    // Generate package.json file, used by npm and grunt.
-    init.writePackageJSON('package.json', {
-      'family': props.family,
-      'name': props.name,
-      'version': '1.0.0',
-      'root': props.family,
-      'description': props.description ,
-      'homepage': props.homepage,
-      'author': props.author,
-      'repository': '',
-      'bugs': '',
-      'licenses': ['MIT'],
-      'dependencies': {},
-      'tests': [props.name],
-      'output': {}
-    }, function(pkg, props) {
-      ['family', 'root', 'tests', 'output', 'author'].forEach(function(prop) {
-        if (prop in props) { pkg[prop] = props[prop]; }
-      });
-      return pkg;
-    });
-
     // All done!
     done();
   });
