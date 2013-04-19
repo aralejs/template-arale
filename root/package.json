@@ -1,0 +1,20 @@
+{
+  "family": "{%= family %}",
+  "name": "{%= name %}",
+  "version": "{%= version %}",
+  "description": "{%= description %}",
+  "homepage": "{%= homepage %}",
+  "author": "{%= author %}",
+  "repository": "{%= repository %}",
+  "bugs": "",
+  "keywords": [],
+  "licenses": "{%= licenses %}",
+  "spm": {
+    "output": ["{%= name %}.js"],
+    "alias": {},
+    "devAlias": {},
+    "engines": {
+      "seajs": "seajs/seajs/2.0.0/sea.js"
+    }
+  }
+}

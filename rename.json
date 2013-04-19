@@ -1,0 +1,4 @@
+{
+  "src/name.js": "src/{%= name %}.js",
+  "tests/name-spec.js": "tests/{%= name %}-spec.js"
+}
