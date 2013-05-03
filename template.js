@@ -27,6 +27,7 @@ exports.template = function(grunt, init, done) {
     init.prompt('bugs'),
     init.prompt('licenses', 'MIT')
   ], function(err, props) {
+
     var files = init.filesToCopy(props);
 
     // Actually copy (and process) files.
