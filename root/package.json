@@ -6,7 +6,9 @@
   "homepage": "{%= homepage %}",
   "author": "{%= author %}",
   "repository": "{%= repository %}",
-  "bugs": "",
+  "bugs": {
+    "url": ""
+  },
   "keywords": ["widget"],
   "licenses": "{%= licenses %}",
   "spm": {
