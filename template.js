@@ -1,4 +1,4 @@
- 'use strict';
+'use strict';
 
 exports.description = 'Create Arale module.';
 
@@ -21,12 +21,13 @@ exports.template = function(grunt, init, done) {
     init.prompt('name'),
     init.prompt('family'),
     init.prompt('version', '1.0.0'),
-    init.prompt('description', 'The best jQuery plugin ever.'),
+    init.prompt('description'),
     init.prompt('repository'),
     init.prompt('homepage'),
     init.prompt('bugs'),
     init.prompt('licenses', 'MIT')
   ], function(err, props) {
+
     var files = init.filesToCopy(props);
 
     // Actually copy (and process) files.
