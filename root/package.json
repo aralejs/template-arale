@@ -13,8 +13,6 @@
     "output": ["{%= name %}.js"],
     "alias": {},
     "devAlias": {},
-    "engines": {
-      "seajs": "seajs/seajs/2.0.0/sea.js"
-    }
+    "engines": {}
   }
 }
