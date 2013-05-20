@@ -5,7 +5,10 @@
   "description": "{%= description %}",
   "homepage": "{%= homepage %}",
   "author": "{%= author %}",
-  "repository": "{%= repository %}",
+  "repository": {
+    "type": "git",
+    "url": "{%= repository %}"
+  },
   "bugs": {
     "url": ""
   },
