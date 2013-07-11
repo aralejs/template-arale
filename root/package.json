@@ -12,7 +12,7 @@
   "bugs": {
     "url": ""
   },
-  "keywords": ["widget"],
+  "keywords": [],
   "licenses": "{%= licenses %}",
   "spm": {
     "output": ["{%= name %}.js"],
