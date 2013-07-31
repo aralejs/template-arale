@@ -1,6 +1,6 @@
 define(function(require) {
 
-  var {%= name %} = require('../src/{%= name %}');
+  var {%= name %} = require('{%= name %}');
 
   describe('{%= name %}', function() {
 

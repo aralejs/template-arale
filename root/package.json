@@ -5,6 +5,10 @@
   "description": "{%= description %}",
   "homepage": "{%= homepage %}",
   "author": "{%= author %}",
+  "maintainers": [
+    "{%= author %}",
+    "{%= author %}"
+  ],
   "repository": {
     "type": "git",
     "url": "{%= repository %}"

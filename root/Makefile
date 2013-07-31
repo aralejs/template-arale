@@ -1,36 +1,14 @@
-THEME = $(HOME)/.spm/themes/arale
+REPORTER = spec
+install:
+	rm -fr _theme
+	git clone git://github.com/aralejs/nico-arale.git _theme
+	./node_modules/.bin/nico build --theme _theme -C _theme/nico.js
 
-build-doc:
-	@nico build -C $(THEME)/nico.js
+test: install
+	./node_modules/.bin/mocha-browser _site/tests/runner.html -S --reporter $(REPORTER)
 
-publish-doc: clean build-doc
-	@spm publish --doc _site -s spmjs
+test-cov:
+	./node_modules/.bin/jscoverage src _site/src-cov
+	./node_modules/.bin/mocha-browser _site/tests/runner.html?cov -S -R html-cov > coverage.html
 
-server:
-	@nico server -C $(THEME)/nico.js
-
-watch:
-	@nico server -C $(THEME)/nico.js --watch
-
-clean:
-	@rm -fr _site
-
-
-runner = _site/tests/runner.html
-test-src:
-	@mocha-browser ${runner} -S
-
-test-dist:
-	@mocha-browser ${runner}?dist -S
-
-test: test-src test-dist
-
-output = _site/coverage.html
-coverage: build-doc
-	@rm -fr _site/src-cov
-	@jscoverage --encoding=utf8 src _site/src-cov
-	@mocha-browser ${runner}?cov -S -R html-cov > ${output}
-	@echo "Build coverage to ${output}"
-
-
-.PHONY: build-doc publish-doc server clean test coverage
+.PHONY: install test test-cov
