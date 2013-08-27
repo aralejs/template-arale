@@ -20,6 +20,7 @@ exports.template = function(grunt, init, done) {
     // Prompt for these values.
     init.prompt('name'),
     init.prompt('family'),
+    init.prompt('author'),
     init.prompt('version', '1.0.0'),
     init.prompt('description'),
     init.prompt('repository'),
